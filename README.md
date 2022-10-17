@@ -8,3 +8,15 @@ Important notes:
 * npm i web-push
 * To generate the VAPID keys in your terminal, use the command: ./node_modules/.bin/web-push generate-vapid-keys
 
+How it works:
+* Check if serviceWorker is in navigator of browser
+* Registering serviceWorker
+* Service worker is registered
+* Registering push
+* User is prompted to allow showing notifications
+* Push registered
+* Send push
+* Push sent
+* Push received
+
+### Only works in chrome so far
