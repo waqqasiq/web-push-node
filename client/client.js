@@ -1,5 +1,5 @@
 
-const publicVapidKey = 'BGPdQUWV3ltYn1jog81Rox0SKIb0FhJH7Vkr1vVO-y83fk4J2wMvTah6dEDB3WSRvwjp-6Wc19tfnWfUAorOO3k';
+const VAPID_PUBLIC_KEY = 'BGPdQUWV3ltYn1jog81Rox0SKIb0FhJH7Vkr1vVO-y83fk4J2wMvTah6dEDB3WSRvwjp-6Wc19tfnWfUAorOO3k';
 
 if ("serviceWorker" in navigator) {
     console.log('serviceWorker is in navigator');
@@ -29,6 +29,7 @@ async function registerSW() {
                     if (serviceWorker.state == "activated") {
                         //If push subscription wasnt done yet have to do here
                         console.log("sw already activated - Do watever needed here");
+                        subscribeForPushNotification(reg);
                     }
                     serviceWorker.addEventListener("statechange", function (e) {
                         console.log("sw statechange : ", e.target.state);
@@ -50,7 +51,7 @@ async function registerSW() {
 
 async function subscribeForPushNotification(register) {
 
-    let serverPublicVapidKey = 'BGPdQUWV3ltYn1jog81Rox0SKIb0FhJH7Vkr1vVO-y83fk4J2wMvTah6dEDB3WSRvwjp-6Wc19tfnWfUAorOO3k';
+    let serverPublicVapidKey = VAPID_PUBLIC_KEY;
 
     let subscriptionOptions = {
         userVisibleOnly: true,

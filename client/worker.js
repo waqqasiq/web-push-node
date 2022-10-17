@@ -8,6 +8,6 @@ self.addEventListener("push", e => {
 
     self.registration.showNotification(data.title, {
         body: 'Test notification',
-        icon: 'http://image.ibb.co/frYOFd/tmlogo.png'
+        icon: 'https://i.ibb.co/MBXXBg1/waqqas-i.png'
     });
 })
