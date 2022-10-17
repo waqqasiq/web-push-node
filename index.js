@@ -22,16 +22,11 @@ app.post('/subscribe', (req, res) => {
     console.log('/subscribe START');
     const subscription = req.body;
     console.log('req.body ', subscription);
-    console.log('req.query ', req.query);
-
-    let titleNotif = 'Test Notif'
-    if (req.query.title) {
-        titleNotif = req.query.title;
-    }
+    // console.log('req.query ', req.query);
 
     res.status(201).json({});
 
-    const payload = JSON.stringify({ title: titleNotif});
+    const payload = JSON.stringify({ title: "Test Notification"});
 
     // pass obj in sendNotification
     webpush
