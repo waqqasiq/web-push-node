@@ -26,7 +26,7 @@ app.post('/subscribe', (req, res) => {
 
     res.status(201).json({});
 
-    const payload = JSON.stringify({ title: "Test Notification"});
+    const payload = JSON.stringify({ title: "Push Notification"});
 
     // pass obj in sendNotification
     webpush
@@ -36,6 +36,6 @@ app.post('/subscribe', (req, res) => {
 })
 
 
-const port = 3021;
+const port = 3022;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
