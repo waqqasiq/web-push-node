@@ -32,11 +32,12 @@ app.post('/subscribe', (req, res) => {
     // pass obj in sendNotification
     webpush
         .sendNotification(subscription, payload)
+        .then((res) =>{console.log('res ', res)})
         .catch(err => console.log('err ', err));
 
 })
 
-const port = 3024;
+const port = 3049;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
 
