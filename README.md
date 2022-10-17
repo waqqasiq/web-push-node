@@ -9,7 +9,7 @@ Important notes:
 * To generate the VAPID keys in your terminal, use the command: ./node_modules/.bin/web-push generate-vapid-keys
 
 <br/>
-------------------------------------------------------------
+
 How it works:
 * Check if serviceWorker is in navigator of browser
 * Registering serviceWorker
@@ -21,7 +21,7 @@ How it works:
 * Push sent
 * Push received
 <br/>
-------------------------------------------------------------
+
 Other notes:
 * Tested in Google Chrome. Works!
 * Web push will be enabled in Safari 16 in macOS 13 or later. And notification permission has to be a user gesture. User needs to click bell icon to sign up for notifications. Then user is prompted to allow notification.
@@ -34,4 +34,4 @@ Other notes:
         "auth":"3GWr1BtVA3E4FTBSboYhYw"
      }
   }```
-------------------------------------------------------------
+
