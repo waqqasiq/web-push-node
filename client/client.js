@@ -2,7 +2,6 @@ const publicVapidKey = 'BGPdQUWV3ltYn1jog81Rox0SKIb0FhJH7Vkr1vVO-y83fk4J2wMvTah6
 
 if ("serviceWorker" in navigator) {
     console.log('serviceWorker is in navigator');
-    localStorage.setItem("user_id", "uid1234x567yz");
     send().catch(err => console.error(err));
 }
 
