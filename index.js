@@ -22,10 +22,16 @@ app.post('/subscribe', (req, res) => {
     console.log('/subscribe START');
     const subscription = req.body;
     console.log('req.body ', subscription);
+    console.log('req.query ', req.query);
+
+    let titleNotif = 'Test Notif'
+    if (req.query.title) {
+        titleNotif = req.query.title;
+    }
 
     res.status(201).json({});
 
-    const payload = JSON.stringify({ title: 'Push Test' });
+    const payload = JSON.stringify({ title: titleNotif});
 
     // pass obj in sendNotification
     webpush
@@ -35,6 +41,6 @@ app.post('/subscribe', (req, res) => {
 })
 
 
-const port = 3018;
+const port = 3021;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

@@ -20,9 +20,11 @@ async function send() {
     });
     console.log('push registered');
 
+    const title = "HelloWorld"
+
     // send push notif
     console.log('Sending push...');
-    await fetch('/subscribe', {
+    await fetch('/subscribe?title='+title, {
         method: 'POST',
         body: JSON.stringify(subscription),
         headers: {
