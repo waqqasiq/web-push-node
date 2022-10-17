@@ -20,3 +20,5 @@ How it works:
 * Push received
 
 ### Only works in chrome so far
+
+### Web push will be enabled in Safari 16 in macOS 13 or later. And notification permission has to be a user gesture. User needs to click bell icon to sign up for notifications. Then user is prompted to allow notification.
